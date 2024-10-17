@@ -1,0 +1,62 @@
+FONCTION ChercherCharactere(chaineDeCharacter, characteresRecherché) : itération
+//Cette fonction prend en parametre une liste de charcacter et un char et retourne l'index du char dans la chaine              
+//chaineDeCharacter (liste/tableau de charactère) : chaine dans laquelle on cherche les charactères
+//characteresRecherché (charactère) : lettre qu’on cherche dans le mot
+//index(entier) : position de la première lettre recherchée
+
+DÉBUT 
+	index := 0 
+	TANT QUE chaineDeCharacter[index] != ‘ \0 ’
+		SI chaineDeCharacter[index] = characteresRecherché ALORS
+			Retourner index
+		index := index + 1
+	Retourner -1
+FIN
+
+
+FONCTION AditionDeMatrice(matrice1[M][N], matrice2[M][N], matriceRep[M][N])
+// Cette fonction aditionne 2 matrice de meme taille
+// matrice1, matrice2 (tableau de float a aditionner)
+// matriceRep (tableau de float qui est la somme des 2 autres matrices)
+// M, N, (des entier defini avant le debut) M : nombre de collone - N : nombre de ligne des tableaux
+//i, j -> index(entier) : position des valeur a aditionner 
+
+DEFINIR M : entier 
+DEFINIR N : entier 
+DÉBUT
+	i:= 0
+	j:= 0
+	POUR i A M
+		POUR j A N
+			matriceRep := matrice1[M][N] + matrice2[M][N]
+FIN
+
+FONCTION multiplicationDeMatrice(matrice1[N][N], matrice2[N][N], matriceRep[N][N])
+// Cette fonction multiplie 2 matrice carre de meme taille
+// matrice1, matrice2 (tableau de float a aditionner)
+// matriceRep (tableau de float qui est la somme des 2 autres matrices)
+// N (entier defini avant le debut) Correspond aux nombres de collone et de lignes des tableaux
+// i, j, x -> index(entier) : position des valeur a aditionner 
+// temporaire (float) : valeur temporaire afin de faire les calculs
+ 
+DEFINIR N : entier 
+DÉBUT
+	i:= 0
+	j:= 0
+	x := 0
+	temporaire := 0
+	POUR i A N
+		POUR j A N
+			pour x A N
+				temporaire := temporaire + (matrice1[i][x] * matrice2[x][j])
+			matriceRep[i][j] := temporaire
+			temporaire := 0
+FIN
+
+DEBUT 
+	tab[10]
+	moyenne
+	Pour index A 10
+		moyenne := moyenne + tab[index]
+	afficher moyenne a l'ecran
+FIN

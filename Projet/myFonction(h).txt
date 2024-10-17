@@ -1,0 +1,31 @@
+#include <Arduino.h>
+#include <stdio.h>
+#include "librobus.h" 
+
+#define PULSES_PER_BLOCK 6685
+#define PULSES_PER_TURN 2075
+
+#define TAILLE_MAX_DU_PARCOURS 15
+#define NOMBRE_DE_PARCOURS 3
+
+extern int parcours[NOMBRE_DE_PARCOURS * 2][TAILLE_MAX_DU_PARCOURS];
+extern int currentParcourX[TAILLE_MAX_DU_PARCOURS];
+extern int currentParoursY[TAILLE_MAX_DU_PARCOURS];
+extern int possibleParcour[3];
+extern int currentParcour;
+extern int robotX;
+extern int robotY;
+extern int robotAngle;
+extern int currentIndex;
+
+ void ChangeParours();
+ void perfectTurnLeft();
+ void perfectTurnRight();
+ void moveOneBlockForward(int firstMotor);
+ void dualMotorRatio(float speed, int maxPulses, int firstMotor);
+ int findIFromPos(int x, int y);
+ bool IsWall();
+ int arr_length(int parkour[]);
+ void stopAll();
+ void dualMotorSpeed(float speedLeft, float speedRight, int maxPulses);
+ void startFromI(int pos, int parcourX[], int parcourY[]);

@@ -1,0 +1,123 @@
+Procedurale 1 
+E1 (moyenne en pseudocode)
+DEBUT
+	// valeur1 (entier) : valeur pour calculer la moyenne
+	// valeur2 (entier) : valeur pour calculer la moyenne
+	// Resultat(réel) : resultat du calcul de la moyenne
+
+	lire valeur1 du clavier
+	lire valeur2 du clavier
+	
+	resultat := (valeur1 + valeur2)/2
+	retourner resultat
+
+FIN
+
+Diagramme d'activité
+==> Lire valeur1 et valeur2 du clavier ==> resultat := valeur1 et valeur2 ==> resultat := resultat/2 ==> afficher resultat à l'ecran
+
+
+
+
+E2 
+Diagramme d'activité
+
+==> Lire valeur1 et valeur2 du clavier ==> \losange 2 	==> [valeur1 < valeur2] ==> afficher valeur2							==> Rond noir entourer d'un cercle
+														==> [valeur1 > valeur2] ==> afficher valeur1
+														==> [valeur1 = valeur2] ==> afficher "Les deux valeurs sont egal"
+
+Pseudocode 
+DEBUT 
+	// valeur1 (entier) : valeur a regarder 
+	// valeur2 (entier) : valeur a regarder 
+
+	lire valeur1 du clavier
+	lire valeur2 du clavier
+	SI valeur1 < valeur2 Alors
+		Ecrire valeur1 a l'ecran
+	SINON SI (valeur1 > valeur2) Alors
+		Ecrire valeur1 a l'ecran
+	SINON ()
+		afficher "valeur 1 = valeur 2"
+FIN
+
+
+E4 
+Pseudocode 
+DEBUT
+	//valeur (entier) 
+	// somme (entier) : somme
+	lire valeur du clavier
+	
+	POUR i := 0 A valeur
+		somme := somme + i
+	Ecrire somme a l'ecran
+FIN
+
+Diagramme Boucle for
+Lire valeur sur le clavier ==> i:= 1, somme := 0 ==> 	*==> SI [i <= valeur] ==> somme := somme + i ==> i := i + 1 * 
+														 ==> SINON "ecrire la valeur a l'ecran" ==> FIN (rond noir)
+
+
+Procedurale 2 
+E2 
+FONCTION calculFacto(valeur) : resulta
+	//calculer factoriel d'un nombre donner
+	//valeur (entier) : valeur a calculer 
+	//resulta (entier) : valeur resulta
+DEBUT
+	resulta := 1
+	POUR i := 1 A valeur
+		resulta := resulta*i
+	retourner resulta
+FIN
+
+suite fibonatchi 
+// valeur1 : nombre de nombre souhaiter 
+// resulta : chaque nombre print
+// derniere : valeur derniere 
+DEBUT 
+resulta := 1
+derniere := 0
+afficher 0 et 1 a lecran
+POUR i A valeur 
+	afficher resulta a l'ecran
+	resulta derniere
+	derniere += resulta	
+FIN
+
+
+
+
+Pseudocode
+Choisi un parcour des 6
+while (not finished) 
+{
+	check for a wall
+	if (oui)
+		if (!normal)
+			changeParcour(ID_Parcours, posRobot);
+		
+		
+}
+
+ChangeParours(ID_Parcours, posRobot)
+	barre ID_Parcours
+	VerifierCompatibiliterParcours(posRobot)
+	
+VerifierCompatibiliterParcours(posRobot)
+{
+	ListParcours<Parcours>;
+	For all => 
+}
+
+
+Procedural 3
+
+DEBUT 
+	tab[10]
+	moyenne
+	Pour index A 10
+		moyenne := moyenne + tab[index]
+	afficher moyenne a l'ecran
+FIN
